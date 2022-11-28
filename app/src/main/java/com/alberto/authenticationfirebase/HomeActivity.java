@@ -1,7 +1,10 @@
 package com.alberto.authenticationfirebase;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,13 +14,18 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Map;
+import java.util.Set;
+
 public class HomeActivity extends AppCompatActivity {
 
     private TextView tEmail, tProvider;
     private Button logOut;
 
     public enum PROVIDER_TYPE{
-        BASIC
+        BASIC,
+        GOOGLE,
+        FACEBOOK
     }
 
     @Override
@@ -31,6 +39,12 @@ public class HomeActivity extends AppCompatActivity {
         String email = bundle.getString("email");
         String provider = bundle.getString("provider");
         setup(email, provider);
+
+        SharedPreferences preferences = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("email", email);
+        editor.putString("provider", provider);
+        editor.apply();
     }
 
     private void initComponents(){
@@ -47,6 +61,11 @@ public class HomeActivity extends AppCompatActivity {
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences preferences = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.apply();
+
                 FirebaseAuth.getInstance().signOut();
                 onBackPressed();
             }

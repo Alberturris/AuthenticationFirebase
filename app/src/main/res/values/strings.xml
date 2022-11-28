@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AuthenticationFirebase</string>
     <string name="logo_de_firebase">Logo de Firebase</string>
+    <string name="prefs_file">com.alberto.authenticationfirebase.PREF_FILE</string>
 </resources>
