@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770024654848",
+    "project_id": "my-firebase-b4264",
+    "storage_bucket": "my-firebase-b4264.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770024654848:android:06594914187df5be5970e5",
+        "android_client_info": {
+          "package_name": "com.alberto.authenticationfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770024654848-g3tgmm4om47dm3aa9mdmveq0blpfifmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz-YT7UL8KM7_kYJnEDluw1mptw0FaKRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770024654848-g3tgmm4om47dm3aa9mdmveq0blpfifmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

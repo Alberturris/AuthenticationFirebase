@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grisFirebase"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:hint="Email"/>
+
+    <TextView
+        android:id="@+id/tProvider"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="30dp"
+        android:textAlignment="center"
+        android:hint="Provider"/>
+
+    <Button
+        android:id="@+id/bLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/naranjaFirebase"
+        android:text="LOG OUT"/>
+
+
+</LinearLayout>

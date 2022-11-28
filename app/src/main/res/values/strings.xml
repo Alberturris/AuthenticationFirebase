@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AuthenticationFirebase</string>
+    <string name="logo_de_firebase">Logo de Firebase</string>
+</resources>
